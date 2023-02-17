@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body>
+    <center>
+        <h1 id="heading_main" style="font: size 30px; font-style: italic;font-family: Georgia, 'Times New Roman', Times, serif;">FACE RECOGNITION APP</h1>
+        <br><br>
+        <p>This model is trained to identify some family members-</p>
+        <button class="btn_me">FATHER</button>
+        <br>
+        <br>
+        <button class="btn_me">MOTHER</button>
+        <br>
+        <br>
+        <button class="btn_me">SISTER</button>
+        <br>
+        <br>
+        <button class="btn_me">ME!</button>
+        <br>
+        <br>
+        <label style="font-size: 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Webcam View--</label>
+        <div id="webcam"></div>
+        <br><br>
+        <div id="captured_image"></div>
+        <br><br>
+        <button id="btn_capture" class="btn btn-info" >CAPTURE</button>
+        <br><br>
+        <button id="btn_identify" class="btn btn-primary">IDENTIFY</button>
+        <br>
+        <br>
+        <p style="font-size: 22px;">Name : <span id="result_person_name"></span></p>
+        <p style="font-size: 22px;">Accuracy : <span id="result_accuracy"></span></p>
+    </center>
+  </body>

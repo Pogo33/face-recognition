@@ -1,0 +1,12 @@
+body{
+    background-color:rgb(216, 150, 240);
+}
+.btn_me{
+    background-color:lightcoral;
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    font-size: large;
+}
