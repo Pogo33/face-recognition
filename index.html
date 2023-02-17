@@ -30,17 +30,19 @@
         <button class="btn_me">ME!</button>
         <br>
         <br>
-        <label style="font-size: 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Webcam View--</label>
-        <div id="webcam"></div>
-        <br><br>
-        <div id="captured_image"></div>
-        <br><br>
-        <button id="btn_capture" class="btn btn-info" >CAPTURE</button>
-        <br><br>
-        <button id="btn_identify" class="btn btn-primary">IDENTIFY</button>
-        <br>
-        <br>
-        <p style="font-size: 22px;">Name : <span id="result_person_name"></span></p>
-        <p style="font-size: 22px;">Accuracy : <span id="result_accuracy"></span></p>
+        <label>Webcam View - </label>
+        <div id="camera"></div>
+      <br><br>
+        <div id="result"></div>
+      <br><br>
+          <button onclick="take_snapshot()" class="btn btn-info">Capture Image</button>
+      <br><br>
+          <button onclick="check()" class="btn btn-success">Identify Image</button>
+      <br><br>
+
+      <p style="font-size: 22px;">Object : <span id="result_of_objects"></span> </p>
+      <p style="font-size: 22px;">Accuracy : <span id="result_of_accuracy"></span> </p>
     </center>
+  </div>
+  <script src="main.js"></script>
   </body>

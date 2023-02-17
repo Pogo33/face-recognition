@@ -14,8 +14,23 @@ function take_snapshot() {
 };
 
 console.log("ml5 Version: ",ml5.version);
-classifier = ml5.imageClassifier('//https://teachablemachine.withgoogle.com/models/oM02foV_f/teachablemachine.withgoogle.com/models/oM02foV_f/model.json',modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/74JU7cN-E/model.json',modelLoaded);
 
 function modelLoaded() {
     console.log("Model Loaded Successfully!");
 };
+function check() {
+    img = document.getElementById("image_captured");
+    classifier.classify(img, gotResults);
+}
+
+function gotResults(error, results) {
+    if(error) {
+        console.error(error);
+    }
+    else{
+        console.log(results);
+        document.getElementById("result_of_objects").innerHTML = results[0].label;
+        document.getElementById("result_of_accuracy").innerHTML = results[0].confidence.toFixed(3);
+    }
+}
